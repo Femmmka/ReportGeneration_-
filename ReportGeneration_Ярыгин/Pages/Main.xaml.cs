@@ -67,5 +67,9 @@ namespace ReportGeneration_Ярыгин.Pages
             }
             CreateStudents(SearchStudent.FindAll(x => $"{x.Lastname} {x.Firstname}".Contains(TBFIO.Text)));
         }
+        private void ReportGeneration(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+        }
     }
 }
