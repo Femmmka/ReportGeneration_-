@@ -69,7 +69,13 @@ namespace ReportGeneration_Ярыгин.Pages
         }
         private void ReportGeneration(object sender, System.Windows.RoutedEventArgs e)
         {
+            if (CBGroups.SelectedIndex != CBGroups.Items.Count - 1)
+            {
 
+                int IdGroup = AllGroups.Find(x => x.Name == CBGroups.SelectedItem).Id;
+
+                Classes.Common.Report.Group(IdGroup, this);
+            }
         }
     }
 }
