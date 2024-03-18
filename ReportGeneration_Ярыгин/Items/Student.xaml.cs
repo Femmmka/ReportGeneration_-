@@ -25,9 +25,10 @@ namespace ReportGeneration_Ярыгин.Items
         StudentContext student;
         Main main;
 
-        public Student()
+        public Student(StudentContext student, Main main)
         {
             InitializeComponent();
+
 
             TBFio.Text = $"{student.Lastname} {student.Firstname}";
             CBExpelled.IsChecked = student.Expelled;
@@ -75,10 +76,6 @@ namespace ReportGeneration_Ярыгин.Items
             TBGroup.Text = main.AllGroups.Find(x => x.Id == student.IdGroup).Name;
         }
 
-        public Student(StudentContext student, Main main)
-        {
-            this.student = student;
-            this.main = main;
-        }
+
     }
 }

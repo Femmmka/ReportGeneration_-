@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Collections.Generic;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using ReportGeneration_Ярыгин.Classes;
 
 namespace ReportGeneration_Ярыгин.Pages
@@ -33,6 +21,8 @@ namespace ReportGeneration_Ярыгин.Pages
         public Main()
         {
             InitializeComponent();
+            CreateGroupUI();
+
 
         }
         public void CreateGroupUI()
@@ -67,6 +57,7 @@ namespace ReportGeneration_Ярыгин.Pages
             }
             CreateStudents(SearchStudent.FindAll(x => $"{x.Lastname} {x.Firstname}".Contains(TBFIO.Text)));
         }
+
         private void ReportGeneration(object sender, System.Windows.RoutedEventArgs e)
         {
             if (CBGroups.SelectedIndex != CBGroups.Items.Count - 1)
