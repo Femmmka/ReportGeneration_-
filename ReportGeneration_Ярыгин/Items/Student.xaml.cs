@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ReportGeneration_Ярыгин.Classes;
+using ReportGeneration_Ярыгин.Pages;
 
 namespace ReportGeneration_Ярыгин.Items
 {
@@ -20,9 +22,18 @@ namespace ReportGeneration_Ярыгин.Items
     /// </summary>
     public partial class Student : UserControl
     {
+        private StudentContext student;
+        private Main main;
+
         public Student()
         {
             InitializeComponent();
+        }
+
+        public Student(StudentContext student, Main main)
+        {
+            this.student = student;
+            this.main = main;
         }
     }
 }
